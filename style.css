@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{line-height: 1.5em;}
+header{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(img/mobile/image-header.jpg);
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    padding: .95em 0px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navlinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: 90%;
+    position: absolute;
+    top: 12vh;
+    padding: 2em;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform .3s ease-in, opacity .3s ease;
+}
+.navlinks.toggle{
+    opacity: 1;
+    transition: transform .3s ease-in, opacity .3s ease;
+    transform: translateY(0%);
+}
+.navlinks li{
+    list-style: none;
+    margin-bottom: 2em;
+}
+.navlinks li:last-child{
+    margin-bottom: unset;
+}
+.navlinks li a{
+    color: hsl(232, 10%, 55%);
+    font-size: 1.5em;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: 'Barlow', sans-serif;
+}
+.navlinks li a:hover{
+    color: #000;
+    padding: 1em;
+    width: 100%;
+    border-radius: 100px;
+    background-color: gold;
+}
+
+.open-text{
+    width: 60%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: 'Fraunces', serif;
+}
+#arrow-down{padding-top: 2em;}
+
+/* main contents */
+main > * img{width: 100%;}
+.info{
+    padding: 3em;
+    text-align: center;
+}
+section > * h1{font-family: 'Fraunces', serif; font-weight: 900;}
+.info h1,.info p{padding-bottom: 1.2em;}
+.info h1{font-size: 2em;}
+.learn{
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+}
+.learn::after,#stand::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    opacity: .6;
+    border-radius: 8px;
+    transition: .4s ease;
+    background-color: hsl(51, 100%, 49%);
+}
+#stand::after{background-color: hsl(7, 99%, 70%);}
+.learn:hover::after,#stand:hover::after{
+    height: 50%;
+}
+.berry,.orange{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(img/mobile/image-graphic-design.jpg);
+}
+.orange{background-image: url(img/mobile/image-photography.jpg);}
+.berry-info,.orange-info{
+    position: absolute;
+    bottom: 5vh;
+    width: 70%;
+    line-height: 1.5em;
+    text-align: center;
+}
+.berry-info{color: hsl(167, 40%, 24%);}
+.orange-info{color: hsl(198, 62%, 26%);}
+.berry-info h1,.orange-info h1{padding-bottom: 1em;}
+
+/* client testimonials */
+.testimonials{
+    text-align: center;
+    padding: 5em 0px;
+}
+.testimonials h2{padding-bottom: 2em; color: hsl(210, 4%, 67%);font-family: 'Fraunces', serif; letter-spacing: 2px;}
+.client img{
+    width: 30%;
+    height: 30%;
+    border-radius: 100%;
+}
+.client-comment,.client-info{padding: 2em 0px 0px;}
+.client-info span{padding-bottom: 2em;}
+.client:not(:last-child){padding-bottom: 4em;}
+
+/* image gallery */
+.img-gallery{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+/* footer */
+footer{
+    padding: 2em;
+    text-align: center;
+    background-color:  hsl(168, 34%, 41%);
+}
+footer > *:not(:last-child){
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 1em;
+}
+#footerlink{padding-bottom: 3em;}
+.links li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 1em;
+}
+.links li a{text-decoration: none; color: hsl(167, 40%, 24%);}
+.links li a:hover{
+    color: white;
+    cursor: pointer;
+}
+.desktop{display: none;}
+
+@media(min-width:859px){
+    header{background-image: url(img/desktop/image-header.jpg);}
+    .desktop{display: block;}
+    #burger-icon,.mobile{width:unset; display: none;}
+    .navlinks{
+        opacity: 1;
+        display: unset;
+        position: unset;
+        padding: unset;
+        transform: unset;
+        width: unset;
+        background-color: unset; 
+    }
+    .navlinks li{
+        display: inline;
+        margin: 1em;
+    }
+    .open-text{height: 60vh; font-size: 1.5em;}
+    #arrow-down{padding-top: 3em; width: 30px;}
+
+    /* main contents */
+    section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .info{
+        padding: 4em;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .berry{
+        background-image: url(img/desktop/image-graphic-design.jpg);
+    }
+    .orange{background-image: url(img/desktop/image-photography.jpg);}
+    .berry-info,.orange-info{
+        position: absolute;
+        bottom: 5vh;
+        width: 70%;
+        line-height: 1.5em;
+        text-align: center;
+    }
+    
+    /* clients testimonials */
+    .testimonials{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .clients{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .client-comment,.client-info{padding: 2em 2em 0px;}
+    .client-info span{padding-bottom: 2em;}
+    .client:not(:last-child){padding-bottom: 0px;}
+
+    /* image gallery */
+    .img-gallery{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+
+}
+

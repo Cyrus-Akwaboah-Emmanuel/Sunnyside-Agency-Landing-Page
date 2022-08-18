@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sunny Agency Landing Page</title>
+</head>
+<body>
+     <!-- logo, navigation links & burger -->
+    <header>
+        <nav class="container navbar">
+            <a href="#f" id="logo"><img src="img/logo.svg" alt="sunnyside svg"></a>
+            <ul class="navlinks">
+                <li><a href="#about">about</a></li>
+                <li><a href="#services">services</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <img src="img/icon-hamburger.svg" alt="burger icon" id="burger-icon">
+        </nav>
+        <!-- opening text -->
+        <div class="container open-text">
+            <h1>WE ARE CREATIVES</h1>
+            <img src="img/icon-arrow-down.svg" alt="arrow-down icon" id="arrow-down">
+        </div>
+    </header>
+
+    <!-- main contents -->
+    <main>
+        <section class="img-info" id="sec-1">
+            <img src="img/mobile/image-transform.jpg" class="mobile" alt="egg with yellow background" id="egg">
+            <article class="info">
+                <h1>Transform your brand</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate fuga mollitia! Ex explicabo nulla dolorem. Voluptate at odio quam enim eaque non tempore praesentium placeat nesciunt, accusamus quo expedita!</p>
+                <a href="#learn" class="learn" id="brand">learn more</a>
+            </article>
+            <img src="img/mobile/image-transform.jpg" class="desktop" alt="egg with yellow background" id="egg">
+        </section>
+
+        <section class="img-info" id="sec-2">
+            <img src="img/mobile/image-stand-out.jpg" class="mobile" alt="pink cup with pink backgorund" id="cup">
+            <img src="img/desktop/image-stand-out.jpg" class="desktop" alt="pink cup with pink backgorund" id="cup">
+            <article class="info">
+                <h1>Stand out to the right audience</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cupiditate fuga mollitia! Ex explicabo nulla dolorem. Voluptate at odio quam enim eaque non tempore praesentium placeat nesciunt, accusamus quo expedita!</p>
+                <a href="#learn" class="learn" id="stand">learn more</a>
+            </article>
+        </section>
+
+        <!-- graphic design & photography -->
+        <section class="graphic-photography">
+            <div class="berry" id="sec-3">
+                <div class="berry-info">
+                    <h1>Graphic Design</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aliquam modi fuga quae nihil vero dicta magni facere.</p>
+                </div>
+            </div>
+    
+            <div class="orange" id="sec-3">
+                <div class="orange-info">
+                    <h1>Photography</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, aliquam modi fuga quae nihil vero dicta magni facere.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- clients testimonials -->
+        <section class="container testimonials">
+            <h2>Clients Testimonials</h2>
+            <div class="clients">
+                <div id="client-1" class="client">
+                    <img src="img/image-emily.jpg" alt="emily">
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum id similique atque maiores. Cum vitae fuga dignissimos, ut voluptates vel?</p>
+                        <p class="client-info"><span>Emily R.</span><br>Marketing Director</p>
+                    </div>
+                </div>
+    
+                <div id="client-2" class="client">
+                    <img src="img/image-jennie.jpg" alt="emily">
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum id similique atque maiores. Cum vitae fuga dignissimos, ut voluptates vel?</p>
+                        <p class="client-info"><span>Jennie F.</span><br>Business Owner</p>
+                    </div>
+                </div>
+    
+                <div id="client-3" class="client">
+                    <img src="img/image-thomas.jpg" alt="emily">
+                    <div class="client-comment">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum id similique atque maiores. Cum vitae fuga dignissimos, ut voluptates vel?</p>
+                        <p class="client-info"><span>Thomas S.</span><br>Marketing Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- image gallery -->
+        <section class="img-gallery">
+            <img src="img/mobile/image-gallery-cone.jpg" alt="cone">
+            <img src="img/mobile/image-gallery-milkbottles.jpg" alt="cone">
+            <img src="img/mobile/image-gallery-orange.jpg" alt="cone">
+            <img src="img/mobile/image-gallery-sugar-cubes.jpg" alt="cone">
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <!-- <div class="container footer-info"> -->
+        <img src="img/logo.svg" alt="sunnyside logo svg">
+        <ul class="links" id="footerlink">
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+        </ul>
+        <ul class="links" id="medialinks">
+            <li><a href="#about"><img src="img/icon-facebook.svg" alt="facebook"></a></li>
+            <li><a href="#project"><img src="img/icon-twitter.svg" alt="twitter"></a></a></li>
+            <li><a href="#services"><img src="img/icon-instagram.svg" alt="instagram"></a></a></li>
+            <li><a href="#services"><img src="img/icon-pinterest.svg" alt="pinterest"></a></a></li>
+        </ul>
+        <!-- </div> -->
+    </footer>
+
+    <script>
+        var burger = document.querySelector("#burger-icon");
+        var menu = document.querySelector(".navlinks");
+
+        burger.addEventListener("click", () =>{
+            menu.classList.toggle("toggle");
+        });
+    </script>
+</body>
+</html>
